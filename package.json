@@ -9,14 +9,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run reset:vite && tsc && vite build",
+    "build": "yarn reset:vite && tsc && vite build",
     "preview": "vite preview",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(ts|tsx|js|jsx|json|css|md|mdx|html)\"",
     "prettier:fix": "prettier --ignore-path .gitignore \"**/*.+(ts|tsx|js|jsx|json|css|md|mdx|html)\" --write",
     "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
-    "lint:fix": "npm run lint -- --fix",
+    "lint:fix": "yarn lint -- --fix",
     "lint-staged": "lint-staged — config .lintstagedrc",
-    "clean": "rimraf node_modules && npm install --no-audit --no-fund --omit=optional",
+    "clean": "rimraf node_modules && yarn install --ignore-optional",
     "reset:vite": "rimraf ./.vite-cache ./dist",
     "prepare": "husky install"
   },
@@ -27,6 +27,8 @@
   "dependencies": {
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "axios": "^0.27.2",
+    "axios-hooks": "^3.1.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.4.1"
@@ -37,6 +39,7 @@
     "@babel/preset-typescript": "^7.17.12",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@types/lru-cache": "^7.10.10",
     "@types/node": "^18.7.18",
     "@typescript-eslint/eslint-plugin": "^5.38.0",
     "@typescript-eslint/parser": "^5.38.0",

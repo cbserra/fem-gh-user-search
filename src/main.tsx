@@ -1,5 +1,4 @@
-import './global.css'
-import 'virtual:fonts.css'
+// import './global.css'
 
 import React from 'react'
 import { createRoot } from 'react-dom/client'

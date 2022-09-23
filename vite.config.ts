@@ -2,7 +2,6 @@
 
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
-import { VitePluginFonts } from 'vite-plugin-fonts'
 import { createHtmlPlugin } from 'vite-plugin-html'
 import viteImagemin from 'vite-plugin-imagemin'
 
@@ -19,21 +18,6 @@ export default defineConfig({
     createHtmlPlugin({
       minify: true,
       entry: 'src/main.tsx'
-    }),
-    VitePluginFonts({
-      // Custom fonts
-      custom: {
-        families: [
-          {
-            name: 'CascadiaCodePL',
-            src: './src/assets/fonts/*.woff2'
-          }
-        ],
-        display: 'swap',
-        preload: true,
-        prefetch: false,
-        injectTo: 'head-prepend'
-      }
     })
   ],
   css: {
