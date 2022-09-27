@@ -3,6 +3,7 @@
     "svg/images",
     "configs",
     "dark-mode",
-    "search"
+    "search",
+    "ts"
   ]
 }

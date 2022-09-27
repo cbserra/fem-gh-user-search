@@ -40,11 +40,13 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-          cache: 'npm'
+          cache: 'yarn'
       - name: Install dependencies
-        run: npm ci
+        run: yarn install
       - name: 💅🏼 Linting
-        run: npm run lint
+        run: yarn lint:fix
+      - name: 🧱 Building
+        run: yarn build
 
   deploy_to_vercel:
     needs: [lint]
