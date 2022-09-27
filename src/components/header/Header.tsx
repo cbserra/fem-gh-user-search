@@ -1,6 +1,6 @@
-import { useDarkMode } from '../hooks/useDarkMode'
-import { ReactComponent as MoonIcon } from '../assets/images/icon-moon.svg'
-import { ReactComponent as SunIcon } from '../assets/images/icon-sun.svg'
+import { useDarkMode } from '../../hooks/useDarkMode'
+import { ReactComponent as MoonIcon } from '../../assets/images/icon-moon.svg'
+import { ReactComponent as SunIcon } from '../../assets/images/icon-sun.svg'
 
 const themeIcons = [
   {

@@ -3,8 +3,9 @@ import axios from 'axios'
 import { makeUseAxios } from 'axios-hooks'
 import React from 'react'
 
+import Main from '../results/Main'
+
 import Search from './Search'
-import Main from './Main'
 
 const useAxios = makeUseAxios({
   axios: axios.create({ baseURL: 'https://api.github.com/users/' })
