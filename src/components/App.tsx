@@ -3,7 +3,7 @@ import Header from './header/Header'
 
 function App() {
   return (
-    <main className="grid grid-cols-1 gap-y-[1.6rem]">
+    <main className="grid grid-cols-1 gap-y-[3.6rem]">
       <Header />
       <GitHubSearch />
     </main>
