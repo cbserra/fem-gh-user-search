@@ -19,18 +19,14 @@ const GitHubSearch = () => {
     await refetch({ url: userName || 'octocat' })
       .then(console.info)
       .catch(console.error)
-
-    // console.log(searchResult)
   }
-
-  if (loading) return <p>Loading...</p>
-  // if (error) return <p>{JSON.stringify(error.toJSON())}</p>
 
   return (
     <>
       <Search
         error={error}
         handleSearch={handleSearch}
+        loading={loading}
         setUserName={setUserName}
         userName={userName}
       />

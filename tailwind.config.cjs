@@ -29,12 +29,13 @@ module.exports = {
       'dark-toggle-hover': '#90A4D4',
       'button-hover': '#60ABFF',
       'avatar-outline-green': '#4BB543',
+      red: '#F74646'
     },
     fontSize: {
       base: '62.5%',
       detail: ['1.3rem', { lineHeight: '2.2rem' }],
-
       'stats-label': ['1.1rem', { lineHeight: '1.6rem' }],
+      'stats-label-lg': ['1.3rem', { lineHeight: '1.9rem' }],
       'detail-lg': ['1.5rem', { lineHeight: '2.2rem' }],
       body: ['1.3rem', { lineHeight: '2.5rem' }],
       'body-lg': ['1.5rem', { lineHeight: '2.5rem' }],
@@ -51,15 +52,17 @@ module.exports = {
       'heading-1': [
         '2.6rem',
         {
-          lineHeight: ' 3.8rem',
+          lineHeight: ' 3.9rem',
           fontWeight: '700'
         }
       ],
       'heading-2': ['2.2rem', { lineHeight: '3.3rem', fontWeight: '700' }],
       'heading-3': ['1.6rem', { lineHeight: '2.4rem', fontWeight: '400' }],
       'heading-4': ['1.3rem', { lineHeight: '2.0rem', fontWeight: '400' }],
-      'input-sm': ['1.3rem', { lineHeight: '2.5rem', fontWeight: '400' }],
-      'button-sm': ['1.4rem', { lineHeight: '2.1rem', fontWeight: '700' }]
+      input: ['1.3rem', { lineHeight: '2.5rem', fontWeight: '400' }],
+      'input-lg': ['1.8rem', { lineHeight: '2.5rem', fontWeight: '400' }],
+      button: ['1.4rem', { lineHeight: '2.1rem', fontWeight: '700' }],
+      'button-lg': ['1.6rem', { lineHeight: '2.4rem', fontWeight: '700' }]
     },
     boxShadow: {
       section: '0px 16px 30px -10px rgba(70, 96, 187, 0.198567)'

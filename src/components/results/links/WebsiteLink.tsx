@@ -8,12 +8,12 @@ export const WebsiteLink = (props: { website: string | undefined }) => {
     <div
       className={`${
         hasWebsite ? 'text-queen-blue dark:text-white' : 'text-queen-blue/50 dark:text-white/50'
-      } flex gap-x-[1.2rem]`}
+      } flex gap-x-[1.2rem] md:order-3`}
     >
       <span className="w-8 text-left">
         <WebsiteIcon />
       </span>
-      <span className="text-links">
+      <span className="">
         {hasWebsite ? (
           <a href={website} rel="noreferrer" target="_blank">
             {website}

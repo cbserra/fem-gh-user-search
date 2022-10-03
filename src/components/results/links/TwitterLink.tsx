@@ -8,19 +8,14 @@ export const TwitterLink = (props: { twitterUser: string | null | undefined }) =
     <div
       className={`${
         hasTwitter ? 'text-queen-blue dark:text-white' : 'text-queen-blue/50 dark:text-white/50'
-      } flex gap-x-[1.2rem]`}
+      } flex gap-x-[1.2rem] md:order-2`}
     >
       <span className="w-8 text-left">
         <TwitterIcon />
       </span>
-      <span className="text-links">
+      <span className="">
         {hasTwitter ? (
-          <a
-            className="text-links md:text-links-lg text-azure"
-            href={`https://twitter.com/${twitterUser}`}
-            rel="noreferrer"
-            target="_blank"
-          >
+          <a href={`https://twitter.com/${twitterUser}`} rel="noreferrer" target="_blank">
             @{twitterUser}
           </a>
         ) : (

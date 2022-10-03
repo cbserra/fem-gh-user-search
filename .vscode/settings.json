@@ -4,6 +4,7 @@
     "configs",
     "dark-mode",
     "search",
-    "ts"
+    "ts",
+    "gh-actions"
   ]
 }

@@ -8,12 +8,12 @@ export const CompanyLink = (props: { company: string | undefined }) => {
     <div
       className={`${
         hasCompany ? 'text-queen-blue dark:text-white' : 'text-queen-blue/50 dark:text-white/50'
-      } flex gap-x-[1.2rem]`}
+      } flex gap-x-[1.2rem] md:order-4`}
     >
       <span className="w-8 text-left">
         <CompanyIcon />
       </span>
-      <span className="text-links">
+      <span className="">
         {hasCompany ? (
           <a href={`https://github.com/${company.replace('@', '')}`}>{company}</a>
         ) : (

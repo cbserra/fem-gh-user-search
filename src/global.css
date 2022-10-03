@@ -14,3 +14,35 @@
     @apply hover:underline;
   }
 }
+
+@layer utilities {
+  .grid-areas-default {
+    grid-template-areas: 'avatar header' 'bio bio' 'stats stats' 'links links';
+    /* grid-template-columns: 8rem auto; */
+  }
+
+  .grid-areas-lg {
+    grid-template-areas: 'avatar header' 'avatar bio' 'avatar stats' 'avatar links';
+    /* grid-template-columns: 12rem auto; */
+  }
+
+  .grid-area-header {
+    grid-area: header;
+  }
+
+  .grid-area-bio {
+    grid-area: bio;
+  }
+
+  .grid-area-stats {
+    grid-area: stats;
+  }
+
+  .grid-area-links {
+    grid-area: links;
+  }
+
+  .grid-area-avatar {
+    grid-area: avatar;
+  }
+}
