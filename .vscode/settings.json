@@ -5,6 +5,7 @@
     "dark-mode",
     "search",
     "ts",
-    "gh-actions"
+    "gh-actions",
+    "responsive"
   ]
 }
