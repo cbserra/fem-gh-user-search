@@ -11,11 +11,11 @@ export const WebsiteLink = (props: { website: string | undefined }) => {
       } flex gap-x-[1.2rem] md:order-3`}
     >
       <span className="w-8 text-left">
-        <WebsiteIcon />
+        <WebsiteIcon aria-label="Website Icon" />
       </span>
       <span className="">
         {hasWebsite ? (
-          <a href={website} rel="noreferrer" target="_blank">
+          <a href={website} rel="noreferrer" tabIndex={0} target="_blank">
             {website}
           </a>
         ) : (

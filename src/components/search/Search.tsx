@@ -14,7 +14,7 @@ const Search = (props: {
 
   return (
     <>
-      <section
+      <form
         className={cx(
           'rounded-input-radius shadow-section  py-[.7rem] pl-[1.6rem] pr-[.7rem] ',
           'flex w-full items-center justify-between',
@@ -23,13 +23,17 @@ const Search = (props: {
           'dark:bg-yankees-blue dark:shadow-transparent'
         )}
         id="search-bar"
+        onSubmit={handleSearch}
       >
-        <SearchIcon className="text-azure" />
+        <label htmlFor="search-user">
+          <SearchIcon aria-label="Search GitHub User Icon" className="text-azure" />
+        </label>
         <input
           className="text-input md:text-input-lg w-1/3 bg-transparent focus-visible:outline-none"
           id="search-user"
           name="searchUser"
           placeholder="Search GitHub username..."
+          tabIndex={0}
           type="text"
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
@@ -41,11 +45,12 @@ const Search = (props: {
 
         <button
           className="bg-azure hover:bg-azure/50 rounded-button-radius text-button md:text-button-lg py-5 px-6 text-white "
-          onClick={handleSearch}
+          tabIndex={0}
+          type="submit"
         >
           Search
         </button>
-      </section>
+      </form>
     </>
   )
 }

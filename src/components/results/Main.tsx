@@ -10,7 +10,7 @@ const Main = (props: { data: GitHubUser }) => {
   const { data } = props
 
   return (
-    <section
+    <div
       className={cx(
         'rounded-input-radius shadow-section bg-off-white dark:bg-yankees-blue dark:shadow-transparent',
         'w-full',
@@ -32,7 +32,7 @@ const Main = (props: { data: GitHubUser }) => {
       {data && <UserStats data={data} />}
 
       {data && <UserLinks data={data} />}
-    </section>
+    </div>
   )
 }
 

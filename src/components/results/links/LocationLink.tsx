@@ -11,7 +11,7 @@ export const LocationLink = (props: { location: string | undefined }) => {
       } flex gap-x-[1.2rem] md:order-1`}
     >
       <span className="w-8 text-left">
-        <LocationIcon />
+        <LocationIcon aria-label="Location Icon" />
       </span>
       <span className="">{location || 'Not Available'}</span>
     </div>

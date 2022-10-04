@@ -11,11 +11,16 @@ export const TwitterLink = (props: { twitterUser: string | null | undefined }) =
       } flex gap-x-[1.2rem] md:order-2`}
     >
       <span className="w-8 text-left">
-        <TwitterIcon />
+        <TwitterIcon aria-label="Twitter Icon" />
       </span>
       <span className="">
         {hasTwitter ? (
-          <a href={`https://twitter.com/${twitterUser}`} rel="noreferrer" target="_blank">
+          <a
+            href={`https://twitter.com/${twitterUser}`}
+            rel="noreferrer"
+            tabIndex={0}
+            target="_blank"
+          >
             @{twitterUser}
           </a>
         ) : (

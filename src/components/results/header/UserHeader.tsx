@@ -3,11 +3,11 @@ import dateFormat from 'dateformat'
 import cx from 'classnames'
 
 export const UserHeader = (props: { data: GitHubUser }) => {
-  const { data } = props
+  const { name, login, avatar_url, created_at, html_url } = props.data
 
   return (
     <>
-      <aside
+      <div
         className={cx(
           'grid-area-avatar',
           // 'hidden',
@@ -18,11 +18,11 @@ export const UserHeader = (props: { data: GitHubUser }) => {
         )}
       >
         <img
-          alt={data.name}
+          alt={name}
           className="outline-avatar-outline-green  rounded-full outline outline-1"
-          src={data.avatar_url}
+          src={avatar_url}
         />
-      </aside>
+      </div>
 
       <header
         className={cx(
@@ -43,15 +43,15 @@ export const UserHeader = (props: { data: GitHubUser }) => {
           )}
         >
           <h2 className="text-heading-3 md:text-heading-1 col-span-2 font-bold lg:order-1 lg:col-span-1">
-            {data.name || data.login}
+            {name || login}
           </h2>
           <span className="text-links md:text-links-lg text-azure col-span-2 lg:order-3 lg:col-span-2 lg:self-center">
-            <a href={data.html_url} rel="noreferrer" target="_blank">
-              @{data.login}
+            <a href={html_url} rel="noreferrer" tabIndex={0} target="_blank">
+              @{login}
             </a>
           </span>
           <span className="text-detail md:text-detail-lg col-span-2 lg:order-2 lg:col-span-1 lg:self-center lg:text-right">
-            Joined {dateFormat(new Date(data.created_at), 'dd mmm yyyy')}
+            <p>Joined {dateFormat(new Date(created_at), 'dd mmm yyyy')}</p>
           </span>
         </div>
       </header>

@@ -2,7 +2,7 @@ import cx from 'classnames'
 import { GitHubUser } from 'types/Types'
 
 export const UserBio = (props: { data: GitHubUser }) => {
-  const { data } = props
+  const { bio } = props.data
 
   return (
     <section
@@ -16,10 +16,10 @@ export const UserBio = (props: { data: GitHubUser }) => {
     >
       <p
         className={`${
-          !data.bio ? 'text-queen-blue/75 dark:text-white/75' : 'text-queen-blue dark:text-white'
+          !bio ? 'text-queen-blue/75 dark:text-white/75' : 'text-queen-blue dark:text-white'
         } text-detail md:text-detail-lg self-start text-left`}
       >
-        {data.bio || 'This profile has no bio'}
+        {bio || 'This profile has no bio'}
       </p>
     </section>
   )

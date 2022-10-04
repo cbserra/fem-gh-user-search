@@ -11,11 +11,13 @@ export const CompanyLink = (props: { company: string | undefined }) => {
       } flex gap-x-[1.2rem] md:order-4`}
     >
       <span className="w-8 text-left">
-        <CompanyIcon />
+        <CompanyIcon aria-label="Company Icon" />
       </span>
       <span className="">
         {hasCompany ? (
-          <a href={`https://github.com/${company.replace('@', '')}`}>{company}</a>
+          <a href={`https://github.com/${company.replace('@', '')}`} tabIndex={0}>
+            {company}
+          </a>
         ) : (
           'Not Available'
         )}
