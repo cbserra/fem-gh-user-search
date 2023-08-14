@@ -1,4 +1,4 @@
-const config = {
+const vitePluginsConfig = {
   imagemin: {
     gifsicle: {
       optimizationLevel: 7,
@@ -31,4 +31,4 @@ const config = {
   }
 }
 
-export default config
+export default vitePluginsConfig

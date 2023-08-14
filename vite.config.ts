@@ -6,10 +6,10 @@ import { createHtmlPlugin } from 'vite-plugin-html'
 import viteImagemin from 'vite-plugin-imagemin'
 import svgr from 'vite-plugin-svgr'
 
-import config from './config.js'
+import vitePluginsConfig from './vite-plugins.config.js'
 import postcss from './postcss.config.js'
 
-const { imagemin } = config
+const { imagemin } = vitePluginsConfig
 
 // https://vitejs.dev/config/
 export default defineConfig({
