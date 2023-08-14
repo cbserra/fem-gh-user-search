@@ -7,16 +7,17 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "yarn reset:vite && tsc && vite build",
+    "dev": "vite --host",
+    "build": "tsc && vite build",
     "preview": "vite preview",
+    "postinstall": "husky install",
+    "type-check": "tsc --project tsconfig.json --pretty --noEmit",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(ts|tsx|js|jsx|json|css|md|mdx|html)\"",
     "prettier:fix": "prettier --ignore-path .gitignore \"**/*.+(ts|tsx|js|jsx|json|css|md|mdx|html)\" --write",
-    "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
+    "lint": "eslint --config ./.eslintrc.json ./src/**/*.{tsx,ts}",
     "lint:fix": "yarn lint -- --fix",
     "lint-staged": "lint-staged — config .lintstagedrc",
     "clean": "rimraf node_modules && yarn install --ignore-optional",
-    "reset:vite": "rimraf ./.vite-cache ./public",
     "commit": "git-cz"
   },
   "browserslist": [
@@ -79,6 +80,7 @@
     "vite": "^3.2.7",
     "vite-plugin-fonts": "^0.6.0",
     "vite-plugin-html": "^3.2.0",
-    "vite-plugin-imagemin": "^0.6.1"
+    "vite-plugin-imagemin": "^0.6.1",
+    "vite-tsconfig-paths": "^3.5.0"
   }
 }
