@@ -7,6 +7,7 @@
     "bradlc.vscode-tailwindcss",
     "csstools.postcss",
     "stylelint.vscode-stylelint",
-    "editorconfig.editorconfig"
+    "editorconfig.editorconfig",
+    "Rajeshwaran.developer-theme-dark"
   ]
 }

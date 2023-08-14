@@ -1,7 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ['./*.html', './src/**/*.{js,ts,jsx,tsx,css}'],
+  content: [
+    './*.html',
+    './src/**/*.{js,ts,jsx,tsx,css}',
+    './node_modules/flowbite/**/*.js',
+    './node_modules/flowbite-react/lib/**/*.{js,ts}'
+  ],
   darkMode: 'class',
   theme: {
     extend: {
@@ -79,5 +84,5 @@ module.exports = {
       'icon-twitter': "url('./assets/images/icon-twitter.svg')"
     }
   },
-  plugins: []
+  plugins: [require('flowbite/plugin')]
 }

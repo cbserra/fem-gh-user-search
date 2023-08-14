@@ -14,8 +14,30 @@ const useAxios = makeUseAxios({
 const GitHubSearch = () => {
   const [userName, setUserName] = React.useState('')
   const [{ data, loading, error }, refetch] = useAxios({ url: 'octocat' })
+  const userNameRef = React.createRef<HTMLInputElement>()
 
-  async function handleSearch() {
+  async function handleSearch(evt: React.FormEvent<HTMLFormElement>) {
+    console.log(`🚀 ~ handleSearch ~ handleSearch`, handleSearch)
+    evt.preventDefault()
+
+    // new FormData(evt.currentTarget).forEach(console.log)
+
+    // console.log(.get('searchUser'))
+
+    // if (!userName || userName === data?.login) {
+    //   return
+    // }
+    const userName = userNameRef.current?.value
+
+    console.log(`🚀 ~ handleSearch ~ userName`, userName)
+
+    if (!userName) {
+      userNameRef.current?.setCustomValidity('User name is required')
+      userNameRef.current?.reportValidity()
+
+      return false
+    }
+
     await refetch({ url: userName || 'octocat' })
       .then(console.info)
       .catch(console.error)
@@ -27,8 +49,10 @@ const GitHubSearch = () => {
         error={error}
         handleSearch={handleSearch}
         loading={loading}
+        refetch={refetch}
         setUserName={setUserName}
         userName={userName}
+        userNameRef={userNameRef}
       />
       <Main data={data} />
     </>

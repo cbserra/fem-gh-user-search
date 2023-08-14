@@ -43,7 +43,7 @@ const Header = () => {
           type="checkbox"
           value={darkMode ? 'dark' : 'light'}
           onChange={() => toggleDarkMode((prevValue) => !prevValue)}
-          onClick={() => toggleDarkMode((prevValue) => !prevValue)}
+          // onClick={() => toggleDarkMode((prevValue) => !prevValue)}
           onKeyDown={(e) => {
             if (e.key === 'Enter') {
               toggleDarkMode(!darkMode)

@@ -16,7 +16,7 @@ export default defineConfig({
   plugins: [
     svgr(),
     react(),
-    // viteImagemin(imagemin),
+    viteImagemin(imagemin),
     createHtmlPlugin({
       minify: true,
       entry: 'src/main.tsx'
